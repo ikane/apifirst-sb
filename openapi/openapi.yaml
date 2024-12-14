@@ -37,9 +37,9 @@ x-tagGroups:
       # - User
       # - Info
       - Echo
-  - name: Administration
-    tags:
-      - Admin
+  # - name: Administration
+  #   tags:
+  #     - Admin
 servers:
   - url: https://{tenant}/api/v1
     variables:
