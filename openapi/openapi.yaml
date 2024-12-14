@@ -6,7 +6,7 @@ info:
   contact:
     name: Ibrahima KANE
     email: kaneelhadji2610@yahoo.fr
-    url: http://example.com/contact
+    url: framework.guru
   license:
     name: Apache 2.0
     url: http://www.apache.org/licenses/LICENSE-2.0.html
@@ -23,8 +23,8 @@ externalDocs:
 tags:
   - name: Echo
     description: "Example echo operations."
-  # - name: User
-  #   description: "Example actions on user accounts."
+  - name: User
+    description: "Example actions on user accounts."
   # - name: Admin
   #   description: "Example operations reserved for administrators."
   # - name: Info
@@ -34,7 +34,7 @@ tags:
 x-tagGroups:
   - name: General
     tags:
-      # - User
+      - User
       # - Info
       - Echo
   # - name: Administration
@@ -48,12 +48,12 @@ servers:
         description: Your tenant id
   - url: https://example.com/api/v1
 paths:
-  # '/users/{username}':
-  #   $ref: 'paths/users_{username}.yaml'
-  # '/user':
-  #   $ref: 'paths/user.yaml'
-  # '/user/list':
-  #   $ref: 'paths/user-status.yaml'
+  "/users/{username}":
+    $ref: "paths/users_{username}.yaml"
+  "/user":
+    $ref: "paths/user.yaml"
+  "/user/list":
+    $ref: "paths/user-status.yaml"
   # /pathItem:
   #   $ref: paths/pathItem.yaml
   # /pathItemWithExamples:
