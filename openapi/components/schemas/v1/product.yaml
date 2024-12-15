@@ -4,20 +4,25 @@ properties:
     type: string
     format: uuid
     description: Unique identifier representing a specific product
+    example: 123e4567-e89b-12d3-a456-426614174000
   title:
     type: string
     description: Product name
+    example: "Product Name"
   description:
     type: string
     description: Product description
+    example: "Product description"
   price:
     type: number
     format: double
     description: Product price
+    example: 9.99
   cost:
     type: number
     format: double
     description: Product price
+    example: 5.99
   # tags:
   #   type: array
   #   items:
@@ -28,6 +33,7 @@ properties:
     description: Product categories
     items:
       type: string
+    example: ["Category 1", "Category 2"]
   dimensions:
     type: object
     description: Product dimensions
@@ -44,6 +50,10 @@ properties:
         type: number
         format: double
         description: Product height
+    example:
+      length: 10
+      width: 5
+      height: 2
   # status:
   #   type: string
   #   description: Product status
@@ -56,6 +66,7 @@ properties:
     items:
       type: string
     description: Product images
+    example: ["image1.jpg", "image2.jpg"]
   # reviews:
   #   type: array
   #   items:
@@ -68,7 +79,9 @@ properties:
     type: string
     format: date-time
     description: Product creation date
+    example: "2021-01-01T00:00:00Z"
   updatedAt:
     type: string
     format: date-time
     description: Product last update date
+    example: "2021-01-01T00:00:00Z"
