@@ -1,21 +1,29 @@
 type: object
-properties: 
-  id: 
+properties:
+  id:
     type: string
     format: uuid
-  displayName: 
+    example: 123e4567-e89b-12d3-a456-426614174000
+  displayName:
     type: string
+    example: "Visa"
   cardNumber:
     type: integer
+    example: 1234567890123456
   expiryMonth:
     type: integer
+    example: 12
   expiryYear:
     type: integer
+    example: 2022
   cvv:
     type: integer
+    example: 123
   dateCreated:
     type: string
     format: date-time
+    example: "2021-01-01T00:00:00Z"
   dateUpdated:
     type: string
-    format: date-time          
+    format: date-time
+    example: "2021-01-01T00:00:00Z"

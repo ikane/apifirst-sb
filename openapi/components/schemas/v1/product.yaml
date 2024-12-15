@@ -42,14 +42,17 @@ properties:
         type: number
         format: double
         description: Product length
+        example: 10
       width:
         type: number
         format: double
         description: Product width
+        example: 5
       height:
         type: number
         format: double
         description: Product height
+        example: 2
     example:
       length: 10
       width: 5

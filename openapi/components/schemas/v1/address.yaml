@@ -1,21 +1,27 @@
 type: object
-properties: 
-  id: 
+properties:
+  id:
     type: string
     format: uuid
     description: Unique identifier representing a specific customer
-  addressLine1: 
+    example: 123e4567-e89b-12d3-a456-426614174000
+  addressLine1:
     type: string
     description: Address Line 1
-  addressLine2: 
+    example: "123 Main St."
+  addressLine2:
     type: string
     description: Address Line 2
+    example: "Apt. 1"
   city:
     type: string
     description: City
+    example: "Anytown"
   state:
     type: string
     description: State
-  zip: 
+    example: "NY"
+  zip:
     type: string
-    description: Zip Code          
+    description: Zip Code
+    example: "12345"

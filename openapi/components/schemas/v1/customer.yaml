@@ -1,20 +1,23 @@
 type: object
 properties:
-    id:
-      type: string
-      format: uuid
-      description: Unique identifier representing a specific customer
-    name:  
-      $ref: name.yaml
-    shipToAddress:
-      $ref: address.yaml  
-    billToAddress:
-      $ref: address.yaml
-    email:
-      type: string
-    phone:
-      type: string
-    paymentMethods:
-      type: array
-      items: 
-        $ref: payment_methods.yaml         
+  id:
+    type: string
+    format: uuid
+    description: Unique identifier representing a specific customer
+    example: 123e4567-e89b-12d3-a456-426614174000
+  name:
+    $ref: name.yaml
+  shipToAddress:
+    $ref: address.yaml
+  billToAddress:
+    $ref: address.yaml
+  email:
+    type: string
+    example: "test@example.com"
+  phone:
+    type: string
+    example: "123-456-7890"
+  paymentMethods:
+    type: array
+    items:
+      $ref: payment_methods.yaml
