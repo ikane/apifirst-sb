@@ -1,0 +1,31 @@
+type: object
+properties:
+  id:
+    type: string
+    format: uuid
+    description: The unique identifier of the image
+    example: 123e4567-e89b-12d3-a456-426614174000
+  url:
+    type: string
+    format: url
+    description: The url of the image
+    example: https://www.example.com/image.jpg
+  altText:
+    type:
+      - string
+      - "null"
+  dateCreated:
+    type: string
+    format: date-time
+    description: The date the image was created
+    readOnly: true
+    example: 2021-07-01T00:00:00Z
+  dateUpdated:
+    type: string
+    format: date-time
+    description: The date the image was updated
+    readOnly: true
+    example: 2021-07-01T00:00:00Z
+required:
+  - id
+  - url
