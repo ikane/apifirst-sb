@@ -1,11 +1,11 @@
 type: object
-properties: 
-  id: 
+properties:
+  id:
     type: string
     format: uuid
     description: Unique identifier representing a specific payment method.
     readOnly: true
-  displayName: 
+  displayName:
     type: string
     minLength: 2
     maxLength: 100
@@ -26,13 +26,15 @@ properties:
     type: string
     format: date-time
     readOnly: true
+    example: 2021-07-01T00:00:00Z
   dateUpdated:
     type: string
-    format: date-time     
-    readOnly: true     
-required: 
+    format: date-time
+    readOnly: true
+    example: 2021-07-01T00:00:00Z
+required:
   - displayName
   - cardNumber
   - expiryMonth
   - expiryYear
-  - cvv    
+  - cvv
