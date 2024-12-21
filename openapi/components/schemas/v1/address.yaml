@@ -19,6 +19,7 @@ properties:
     description: Address Line 2
     minLength: 3
     maxLength: 100
+    example: Suite 200
   city:
     type: string
     description: City
