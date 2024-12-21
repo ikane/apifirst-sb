@@ -1,0 +1,49 @@
+type: object
+properties:
+  id:
+    type: string
+    format: uuid
+    description: The unique identifier of the product
+    example: 123e4567-e89b-12d3-a456-426614174000
+    readOnly: true
+  description:
+    type: string
+    description: The description of the product
+    example: A product description
+    minLength: 3
+  dimentions:
+    $ref: dimentions.yaml
+  categories:
+    type: array
+    items:
+      $ref: category.yaml
+    minItems: 1
+  images:
+    type: array
+    items:
+      $ref: image.yaml
+  price:
+    type: string
+    pattern: ^-?(?:0|[1-9]\d{0,2}(?:,?\d{3})*)(?:\.\d+)?$
+    example: 123.45
+  cost:
+    type: string
+    pattern: ^-?(?:0|[1-9]\d{0,2}(?:,?\d{3})*)(?:\.\d+)?$
+    example: 123.45
+  dateCreated:
+    type: string
+    format: date-time
+    description: The date the image was created
+    readOnly: true
+    example: 2021-07-01T00:00:00Z
+  dateUpdated:
+    type: string
+    format: date-time
+    description: The date the image was updated
+    readOnly: true
+    example: 2021-07-01T00:00:00Z
+required:
+  - description
+  - categories
+  - price
+  - cost

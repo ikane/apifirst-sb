@@ -1,0 +1,35 @@
+type: object
+properties:
+  id:
+    type: string
+    format: uuid
+    description: The unique identifier of the order line
+    example: 123e4567-e89b-12d3-a456-426614174000
+  product:
+    $ref: order_product.yaml
+  order_quantity:
+    type: integer
+    description: The quantity of the product in the order
+    minimum: 1
+    example: 1
+  ship_quantity:
+    type: integer
+    description: The quantity of the product shipped
+    minimum: 1
+    example: 1
+  dateCreated:
+    type: string
+    format: date-time
+    description: The date the image was created
+    readOnly: true
+    example: 2021-07-01T00:00:00Z
+  dateUpdated:
+    type: string
+    format: date-time
+    description: The date the image was updated
+    readOnly: true
+    example: 2021-07-01T00:00:00Z
+required:
+  - product
+  - order_quantity
+  - ship_quantity

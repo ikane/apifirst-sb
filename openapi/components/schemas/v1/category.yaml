@@ -1,0 +1,31 @@
+type: object
+properties:
+  id:
+    type: string
+    format: uuid
+    description: The unique identifier of the category
+    example: 123e4567-e89b-12d3-a456-426614174000
+  category:
+    type: string
+    description: The category of the product
+    example: Electronics
+  description:
+    type: string
+    description: The description of the category
+    minLength: 3
+    example: Electronic devices
+  dateCreated:
+    type: string
+    format: date-time
+    description: The date the image was created
+    example: 2021-07-01T00:00:00Z
+    readOnly: true
+  dateUpdated:
+    type: string
+    format: date-time
+    description: The date the image was updated
+    example: 2021-07-01T00:00:00Z
+    readOnly: true
+required:
+  - category
+  - description
