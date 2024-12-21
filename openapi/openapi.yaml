@@ -17,8 +17,8 @@ info:
 tags:
   - name: Customer
     description: Customer operations
-  - name: Products
-    description: Product operations   
+  - name: Product
+    description: Product operations
   - name: Order
     description: Operations about orders.
 servers:
@@ -36,13 +36,13 @@ paths:
   /v1/products:
     $ref: paths/v1/products.yaml
   /v1/products/{productId}:
-    $ref: paths/v1/products_{productId}.yaml    
+    $ref: paths/v1/products_{productId}.yaml
   /v1/orders:
     $ref: paths/v1/orders.yaml
   /v1/orders/{orderId}:
-    $ref: paths/v1/orders_{orderId}.yaml    
-security: 
-  -  basic_auth: []  
+    $ref: paths/v1/orders_{orderId}.yaml
+security:
+  - basic_auth: []
 components:
   securitySchemes:
     main_auth:

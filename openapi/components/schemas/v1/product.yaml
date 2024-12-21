@@ -25,11 +25,11 @@ properties:
   price:
     type: string
     pattern: ^-?(?:0|[1-9]\d{0,2}(?:,?\d{3})*)(?:\.\d+)?$
-    example: 123.45$
+    example: 123.45
   cost:
     type: string
     pattern: ^-?(?:0|[1-9]\d{0,2}(?:,?\d{3})*)(?:\.\d+)?$
-    example: 123.45$
+    example: 123.45
   dateCreated:
     type: string
     format: date-time

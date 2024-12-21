@@ -12,7 +12,7 @@ properties:
   price:
     type: string
     pattern: ^-?(?:0|[1-9]\d{0,2}(?:,?\d{3})*)(?:\.\d+)?$
-    example: 123.45$
+    example: 123.45
 required:
   - id
   - price
