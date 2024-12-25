@@ -1,32 +1,26 @@
 type: object
-properties:
-  id:
+properties: 
+  id: 
     type: string
     format: uuid
     description: The unique identifier of the image
-    example: 123e4567-e89b-12d3-a456-426614174000
+    readOnly: true
   url:
     type: string
     format: url
-    description: The url of the image
-    example: https://www.example.com/image.jpg
+    description: The url of the image 
+    minLength: 5
+    maxLength: 500
+    example: https://springframework.guru/wp-content/uploads/2019/08/spring-framework-guru-logo.jpg
   altText:
-    type:
+    type: 
       - string
-      - "null"
-    example: "An image of a product"
+      - 'null'
+    minLength: 3
+    maxLength: 255 
   dateCreated:
-    type: string
-    format: date-time
-    description: The date the image was created
-    readOnly: true
-    example: 2021-07-01T00:00:00Z
+    $ref: ../common/iso_timestamp.yaml
   dateUpdated:
-    type: string
-    format: date-time
-    description: The date the image was updated
-    readOnly: true
-    example: 2021-07-01T00:00:00Z
-required:
-  - id
-  - url
+    $ref: ../common/iso_timestamp.yaml
+required: 
+  -  url    

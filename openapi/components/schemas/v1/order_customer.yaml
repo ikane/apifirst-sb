@@ -4,7 +4,6 @@ properties:
     type: string
     format: uuid
     description: The unique identifier of the customer
-    example: 123e4567-e89b-12d3-a456-426614174000
   name:
     $ref: name.yaml
   shipToAddress:
@@ -14,13 +13,8 @@ properties:
   email:
     type: string
     description: The email address of the customer
-    example: contact@test.com
-  phone:
+  phone:  
     type: string
-    description: The phone number of the customer
+    description: The phone number of the customer 
   selectedPaymentMethod:
-    $ref: payment_method.yaml
-required:
-  - shipToAddress
-  - billToAddress
-  - id
+    $ref: payment_method.yaml  
