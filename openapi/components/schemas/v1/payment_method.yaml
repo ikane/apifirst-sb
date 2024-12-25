@@ -1,11 +1,11 @@
 type: object
-properties:
-  id:
+properties: 
+  id: 
     type: string
     format: uuid
     description: Unique identifier representing a specific payment method.
     readOnly: true
-  displayName:
+  displayName: 
     type: string
     minLength: 2
     maxLength: 100
@@ -23,18 +23,12 @@ properties:
     type: integer
     example: 123
   dateCreated:
-    type: string
-    format: date-time
-    readOnly: true
-    example: 2021-07-01T00:00:00Z
+    $ref: ../common/iso_timestamp.yaml
   dateUpdated:
-    type: string
-    format: date-time
-    readOnly: true
-    example: 2021-07-01T00:00:00Z
-required:
+    $ref: ../common/iso_timestamp.yaml
+required: 
   - displayName
   - cardNumber
   - expiryMonth
   - expiryYear
-  - cvv
+  - cvv    
